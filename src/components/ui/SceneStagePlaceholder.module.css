@@ -1,0 +1,206 @@
+.stageFrame {
+  position: relative;
+  aspect-ratio: var(--scene-aspect-ratio, 1080 / 960);
+  width: 100%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glass);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
+}
+
+.compact {
+  padding: 1.25rem;
+}
+
+/* ── Subtle Coordinate Hairlines ── */
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(7, 22, 47, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(7, 22, 47, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.frameHeader {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.specPill,
+.loopPill {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: rgba(7, 22, 47, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid rgba(7, 22, 47, 0.08);
+}
+
+.sceneIndex {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  font-weight: var(--weight-semibold);
+  color: var(--accent-orange);
+}
+
+/* ── Frame Body ── */
+.frameBody {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.radarGraphic {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1.25rem;
+}
+
+.radarRing1 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(7, 22, 47, 0.12);
+}
+
+.radarRing2 {
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  border: 1px dashed rgba(7, 22, 47, 0.16);
+}
+
+.radarAxisX {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(7, 22, 47, 0.1);
+}
+
+.radarAxisY {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(7, 22, 47, 0.1);
+}
+
+.radarPulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--accent-orange);
+  box-shadow: 0 0 0 4px var(--accent-orange-soft);
+}
+
+.contentWrap {
+  max-width: 28rem;
+}
+
+.domainTag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-blue);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.sceneTitle {
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.45rem);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: var(--leading-snug);
+}
+
+.heroObject {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* ── Frame Footer ── */
+.frameFooter {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(7, 22, 47, 0.07);
+}
+
+.payoffBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.payoffLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.payoffValue {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+.stageStatusBadge {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent-orange);
+  background: var(--accent-orange-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(233, 130, 85, 0.25);
+  white-space: nowrap;
+}

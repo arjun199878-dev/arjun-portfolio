@@ -1,0 +1,305 @@
+/* ── ProjectCaseStudyCard.module.css — Acid Editorial ── */
+
+.cardRoot {
+  border: 2px solid var(--ink-border);
+  background: var(--ink-surface);
+  padding: 1.5rem;
+  position: relative;
+  scroll-margin-top: 6rem;
+  transition: border-color 220ms ease;
+}
+
+.cardRoot:hover {
+  border-color: rgba(216, 255, 62, 0.45);
+}
+
+@media (min-width: 640px) {
+  .cardRoot {
+    padding: 2.5rem;
+  }
+}
+
+.topBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--ink-border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.projectCode {
+  color: var(--acid);
+  font-weight: 700;
+}
+
+.slash {
+  color: var(--parchment-muted);
+}
+
+.categoryName {
+  color: var(--parchment);
+  font-weight: 600;
+}
+
+.statusAcid {
+  padding: 0.2rem 0.65rem;
+  background: rgba(216, 255, 62, 0.1);
+  color: var(--acid);
+  border: 1px solid rgba(216, 255, 62, 0.35);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.6875rem;
+}
+
+.statusVermilion {
+  padding: 0.2rem 0.65rem;
+  background: rgba(230, 93, 63, 0.12);
+  color: var(--vermilion);
+  border: 1px solid rgba(230, 93, 63, 0.35);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.6875rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1080px) {
+  .cardGrid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2.25rem;
+  }
+}
+
+.narrativeCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+@media (min-width: 1080px) {
+  .narrativeCol {
+    grid-column: span 6 / span 6;
+  }
+}
+
+.projectTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.65rem, 1.35rem + 1vw, 2.25rem);
+  color: var(--parchment);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.projectSummary {
+  font-family: var(--font-sans);
+  color: var(--parchment-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.metaMatrix {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(46, 52, 38, 0.7);
+}
+
+@media (min-width: 640px) {
+  .metaMatrix {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.metaLabel {
+  font-size: 0.625rem;
+  color: var(--parchment-muted);
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.metaValue {
+  color: var(--parchment);
+  line-height: 1.5;
+  display: block;
+}
+
+.metaValueAcid {
+  color: var(--acid);
+  line-height: 1.5;
+  display: block;
+}
+
+.evidenceCallout {
+  padding: 1rem;
+  background: var(--ink-deep);
+  border-left: 4px solid var(--acid);
+  border-top: 1px solid var(--ink-border);
+  border-right: 1px solid var(--ink-border);
+  border-bottom: 1px solid var(--ink-border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.stepTabsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--ink-border);
+}
+
+.stepBtn {
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  background: var(--ink);
+  border: 1px solid var(--ink-border);
+  color: var(--parchment-muted);
+  transition: all 150ms ease;
+}
+
+.stepBtn:hover {
+  color: var(--parchment);
+  border-color: var(--acid);
+}
+
+.stepBtnActive {
+  background: var(--acid);
+  color: var(--ink);
+  border-color: var(--acid);
+  font-weight: 700;
+}
+
+.calloutHeader {
+  color: var(--parchment);
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.6875rem;
+}
+
+.calloutText {
+  color: var(--parchment-muted);
+  line-height: 1.55;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.metricCard {
+  background: var(--ink-deep);
+  border: 1px solid var(--ink-border);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metricTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.metricVal {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--acid);
+  line-height: 1.1;
+}
+
+.metricDelta {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--vermilion);
+}
+
+.metricLbl {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--parchment-muted);
+}
+
+.metricBadgeWrap {
+  margin-top: 0.25rem;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 0.5rem;
+}
+
+.techPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--ink-deep);
+  border: 1px solid var(--ink-border);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--parchment);
+}
+
+.techDot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 9999px;
+  background: var(--acid);
+}
+
+.stageCol {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 1080px) {
+  .stageCol {
+    grid-column: span 6 / span 6;
+  }
+}
+
+.stageConsole {
+  background: var(--ink-deep);
+  padding: 1rem;
+  border: 1px solid var(--ink-border);
+}
+
+@media (min-width: 640px) {
+  .stageConsole {
+    padding: 1.25rem;
+  }
+}

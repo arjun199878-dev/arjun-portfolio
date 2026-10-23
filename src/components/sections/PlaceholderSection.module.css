@@ -1,0 +1,18 @@
+.reserved {
+  display: grid;
+  place-items: center;
+  min-height: clamp(10rem, 8rem + 10vw, 18rem);
+  margin-top: var(--space-12);
+  padding: var(--space-6);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.reservedLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}

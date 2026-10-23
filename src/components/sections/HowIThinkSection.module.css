@@ -1,0 +1,189 @@
+/* ── HowIThinkSection.module.css — Minimalist Acid Editorial ── */
+
+.section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--ink-border);
+  background: var(--ink);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--ink-border);
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--acid);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(2rem, 1.6rem + 1.8vw, 3rem);
+  color: var(--parchment);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  color: var(--parchment-muted);
+  max-width: 28rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pathwayGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .pathwayGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1120px) {
+  .pathwayGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.stepCard {
+  padding: 1.75rem;
+  height: 100%;
+  background: var(--ink-surface);
+  border: 1px solid var(--ink-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 200ms ease, transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepCard:hover {
+  border-color: rgba(216, 255, 62, 0.45);
+  transform: translateY(-2px);
+}
+
+.stepCardHighlight {
+  padding: 1.75rem;
+  height: 100%;
+  background: var(--ink-surface);
+  border: 1px solid rgba(216, 255, 62, 0.7);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepCardHighlight:hover {
+  transform: translateY(-2px);
+}
+
+.stepCardVermilion {
+  padding: 1.75rem;
+  height: 100%;
+  background: var(--ink-surface);
+  border: 1px solid var(--ink-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 200ms ease, transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepCardVermilion:hover {
+  border-color: var(--vermilion);
+  transform: translateY(-2px);
+}
+
+.numDefault {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(216, 255, 62, 0.5);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.numHighlight {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--acid);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.numVermilion {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--vermilion);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.stepTitle {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--parchment);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.015em;
+}
+
+.stepDesc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--parchment-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.stepFocusAcid {
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--ink-border);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--acid);
+  font-weight: 600;
+}
+
+.stepFocusVermilion {
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--ink-border);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--vermilion);
+  font-weight: 600;
+}

@@ -1,0 +1,157 @@
+/*
+ * Design Tokens — Single source of truth for Arjun T.R's Portfolio.
+ * Paradigm: Acid Editorial (#171914 / #0E100C / #20241C / #2E3426 / #D8FF3E / #E8E0D1 / #E65D3F)
+ */
+
+:root {
+  /* ── Acid Editorial Core Palette ── */
+  --ink: #171914;
+  --ink-deep: #0e100c;
+  --ink-surface: #20241c;
+  --ink-border: #2e3426;
+  --acid: #d8ff3e;
+  --acid-hover: #c6ed2e;
+  --parchment: #e8e0d1;
+  --parchment-muted: #c8bfad;
+  --vermilion: #e65d3f;
+  --vermilion-glow: rgba(230, 93, 63, 0.25);
+
+  /* ── Mapped Semantic Tokens ── */
+  --bg-primary: var(--ink);
+  --bg-elevated: var(--ink-surface);
+  --bg-subtle: var(--ink-deep);
+  --bg-deep: var(--ink-deep);
+
+  --text-primary: var(--parchment);
+  --text-secondary: var(--parchment-muted);
+  --text-tertiary: #8f887a;
+
+  /* ── Aliases matching component imports ── */
+  --bg-surface: var(--ink-surface);
+  --bg-canvas: var(--ink);
+  --color-bg: var(--ink);
+  --color-surface: var(--ink-surface);
+  --color-surface-sunken: var(--ink-deep);
+  --color-ink: var(--parchment);
+  --color-ink-hover: var(--acid);
+  --color-ink-muted: var(--parchment-muted);
+  --color-ink-faint: var(--text-tertiary);
+  --color-on-ink: var(--ink);
+
+  /* ── Semantic & Brand Accents ── */
+  --accent-acid: var(--acid);
+  --accent-acid-soft: rgba(216, 255, 62, 0.12);
+  --accent-vermilion: var(--vermilion);
+  --accent-vermilion-soft: rgba(230, 93, 63, 0.14);
+
+  --accent-orange: var(--vermilion);
+  --accent-orange-soft: rgba(230, 93, 63, 0.14);
+  --color-accent: var(--acid);
+  --color-accent-hover: var(--acid-hover);
+  --color-accent-ink: var(--acid);
+  --color-accent-soft: var(--accent-acid-soft);
+  --color-on-accent: var(--ink);
+
+  --accent-blue: var(--acid);
+  --accent-blue-soft: rgba(216, 255, 62, 0.12);
+  --color-blue: var(--acid);
+  --color-blue-soft: var(--accent-blue-soft);
+
+  --accent-green: var(--acid);
+  --accent-green-soft: rgba(216, 255, 62, 0.12);
+  --color-positive: var(--acid);
+  --color-positive-soft: var(--accent-green-soft);
+
+  /* ── Surface & Glass Tokens (Adapted to Acid Editorial Dark) ── */
+  --glass-bg: rgba(32, 36, 28, 0.92);
+  --glass-bg-strong: rgba(23, 25, 20, 0.95);
+  --glass-border: var(--ink-border);
+  --glass-border-subtle: var(--ink-border);
+  --glass-blur: blur(12px);
+  --glass-filter: blur(12px);
+  --glass-filter-none: none;
+  --glass-highlight: inset 0 1px 0 rgba(216, 255, 62, 0.08);
+
+  /* ── Depth & Brutalist Editorial Shadows ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.65);
+  --shadow-xl: 0 32px 64px -16px rgba(0, 0, 0, 0.75);
+  --shadow-brutalist-vermilion: 4px 4px 0px 0px #e65d3f;
+  --shadow-brutalist-acid: 4px 4px 0px 0px #d8ff3e;
+  --shadow-inset-highlight: inset 0 1px 0 0 rgba(232, 224, 209, 0.06);
+  --shadow-glass: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
+
+  /* ── Borders (Architectural Hairlines) ── */
+  --border-subtle: #2e3426;
+  --border-default: #2e3426;
+  --border-strong: rgba(216, 255, 62, 0.45);
+
+  /* ── Layout & Spacing ── */
+  --container-max: 1280px;
+  --container-narrow: 768px;
+  --container-wide: 1280px;
+  --section-pad-y: 6rem;
+  --section-py: var(--section-pad-y);
+  --gutter: 1.5rem;
+  --header-h: 5rem;
+
+  /* Sharp architectural corners per Acid Editorial spec */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --radius-pill: 2px;
+
+  /* ── Motion Reference Aspect Ratio (1080 x 960) ── */
+  --scene-aspect-ratio: 1080 / 960;
+  --metric-display-size: clamp(3.5rem, 2.5rem + 5vw, 7.5rem);
+
+  /* ── Typography Families (Syne / Space Grotesk / JetBrains Mono) ── */
+  --font-display: "Syne", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ── Fluid Typographic Scale ── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: clamp(1.125rem, 1.03rem + 0.4vw, 1.25rem);
+  --text-xl: clamp(1.375rem, 1.2rem + 0.75vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.45rem + 1.3vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 1.7rem + 2.4vw, 3.75rem);
+  --text-display: clamp(2.75rem, 1.6rem + 4.9vw, 5.5rem);
+
+  --leading-tight: 0.94;
+  --leading-snug: 1.15;
+  --leading-normal: 1.6;
+
+  --tracking-tighter: -0.035em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-label: 0.1em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ── Motion Easings ── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+  --dur-slow: 480ms;
+  --duration-fast: var(--dur-fast);
+  --duration-base: var(--dur-base);
+  --duration-slow: var(--dur-slow);
+
+  /* ── Layers ── */
+  --z-header: 50;
+  --z-overlay: 60;
+  --z-modal: 70;
+}

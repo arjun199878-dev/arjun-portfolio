@@ -1,0 +1,225 @@
+/* ── AboutSection.module.css — Minimalist Acid Editorial ── */
+
+.section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--ink-border);
+  background: var(--ink-deep);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 3.5rem;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .leftCol {
+    grid-column: span 5 / span 5;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--acid);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(2rem, 1.6rem + 1.8vw, 3rem);
+  color: var(--parchment);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.parchmentCard {
+  padding: 1.75rem;
+  background: var(--parchment);
+  color: var(--ink);
+  border: 1px solid var(--parchment);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.parchmentName {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.parchmentQuote {
+  color: rgba(23, 25, 20, 0.85);
+  line-height: 1.65;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.parchmentFooter {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(23, 25, 20, 0.18);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.vermilionText {
+  color: var(--vermilion);
+}
+
+.acidText {
+  color: var(--acid);
+}
+
+/* Education Box */
+.educationBox {
+  background: var(--ink-surface);
+  border: 1px solid var(--ink-border);
+  padding: 1.5rem;
+}
+
+.eduHeader {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--parchment-muted);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--ink-border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.eduList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.eduItem {
+  padding: 1rem;
+  background: var(--ink-deep);
+  border: 1px solid var(--ink-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.eduTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.eduDegree {
+  font-family: var(--font-sans);
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--parchment);
+}
+
+.eduPeriod {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: var(--acid);
+}
+
+.eduInst {
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+  color: var(--parchment-muted);
+}
+
+/* Right Col (7 Cols) */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .rightCol {
+    grid-column: span 7 / span 7;
+  }
+}
+
+.narrativeProse {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  color: var(--parchment-muted);
+  font-family: var(--font-sans);
+  font-size: 1.025rem;
+  line-height: 1.7;
+}
+
+.narrativeProse strong {
+  color: var(--parchment);
+  font-weight: 600;
+}
+
+.skillsMatrix {
+  background: var(--ink-surface);
+  border: 1px solid var(--ink-border);
+  padding: 1.5rem;
+}
+
+.skillRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skillRow {
+  padding: 0.85rem 1rem;
+  background: var(--ink-deep);
+  border: 1px solid var(--ink-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.skillLabel {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--acid);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.skillItems {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--parchment);
+  line-height: 1.55;
+}

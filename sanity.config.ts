@@ -11,7 +11,8 @@ export default defineConfig({
   name: "default",
   title: "Arjun T.R — Site",
   basePath: "/studio",
-  projectId,
+  // Sanity requires a non-empty id; a placeholder lets builds pass when Sanity isn't configured yet.
+  projectId: projectId || "missing-project-id",
   dataset,
   apiVersion,
   plugins: [structureTool({ structure })],

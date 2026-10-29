@@ -1,0 +1,75 @@
+:root {
+  /* Colour */
+  --site-bg: #ffffff;
+  --site-bg-alt: #f5f5f7;
+  --site-bg-dark: #000000;
+  --site-text: #1d1d1f;
+  --site-text-muted: #6e6e73;
+  --site-text-on-dark: #f5f5f7;
+  --site-text-on-dark-muted: #86868b;
+  --site-link: #0071e3;
+  --site-link-hover: #0077ed;
+  --site-line: #d2d2d7;
+  --site-line-dark: #424245;
+  --site-number-gradient: linear-gradient(90deg, #2997ff 0%, #a970ff 100%);
+
+  /* Font */
+  --site-font: var(--site-font-inter), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
+
+  /* Type scale */
+  --site-fs-body: clamp(1.0625rem, 0.98rem + 0.35vw, 1.3125rem);
+  --site-fs-small: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+  --site-fs-eyebrow: clamp(1.0625rem, 1rem + 0.3vw, 1.3125rem);
+  --site-fs-h3: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+  --site-fs-h2: clamp(2.5rem, 1.8rem + 3vw, 4rem);
+  --site-fs-h1: clamp(3rem, 1.8rem + 5.2vw, 6rem);
+  --site-fs-number: clamp(5rem, 2rem + 13vw, 15rem);
+
+  /* Text styling */
+  --site-lh-body: 1.47;
+  --site-lh-heading: 1.07;
+  --site-tracking-heading: -0.015em;
+  --site-tracking-number: -0.04em;
+
+  /* Layout */
+  --site-content: 980px;
+  --site-content-wide: 1200px;
+  --site-gutter: clamp(1rem, 4vw, 1.5rem);
+  --site-section-space: clamp(6rem, 4rem + 8vw, 10rem);
+  --site-radius-tile: 28px;
+  --site-radius-pill: 980px;
+  --site-nav-h: 48px;
+
+  /* Motion */
+  --site-ease: cubic-bezier(0.28, 0.11, 0.32, 1);
+  --site-dur-fast: 240ms;
+  --site-dur-reveal: 800ms;
+  --site-reveal-distance: 30px;
+}
+
+.site-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.site-container {
+  width: min(100% - 2 * var(--site-gutter), var(--site-content));
+  margin-inline: auto;
+}
+
+.site-container-wide {
+  width: min(100% - 2 * var(--site-gutter), var(--site-content-wide));
+  margin-inline: auto;
+}
+
+.site-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

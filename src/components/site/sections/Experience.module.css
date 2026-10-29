@@ -1,0 +1,44 @@
+.section {
+  padding-block: var(--site-section-space);
+  background-color: var(--site-bg);
+}
+
+.role {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--site-line);
+}
+
+.period {
+  font-size: var(--site-fs-small);
+  font-weight: 600;
+}
+
+.location {
+  font-size: var(--site-fs-small);
+  color: var(--site-text-muted);
+}
+
+.title {
+  font-size: var(--site-fs-h3);
+  font-weight: 700;
+}
+
+.company {
+  color: var(--site-text-muted);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--site-text-muted);
+}
+
+@media (min-width: 768px) {
+  .role {
+    grid-template-columns: 220px 1fr;
+  }
+}

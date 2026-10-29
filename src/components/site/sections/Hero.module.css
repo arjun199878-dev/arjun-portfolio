@@ -1,0 +1,53 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92svh;
+  padding: calc(var(--site-nav-h) + 4rem) var(--site-gutter) 4rem;
+  background-color: var(--site-bg);
+  text-align: center;
+}
+
+.scrollOut {
+  transform-origin: center top;
+  will-change: transform, opacity;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  margin-bottom: 1.25rem;
+  font-size: var(--site-fs-eyebrow);
+  font-weight: 600;
+  color: var(--site-text-muted);
+}
+
+.title {
+  font-size: var(--site-fs-h1);
+  font-weight: 700;
+  line-height: var(--site-lh-heading);
+  letter-spacing: var(--site-tracking-heading);
+}
+
+.word {
+  display: inline-block;
+}
+
+.intro {
+  max-width: 34ch;
+  margin: 1.5rem auto 0;
+  color: var(--site-text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}

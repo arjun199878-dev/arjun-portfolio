@@ -1,0 +1,30 @@
+.footer {
+  padding: 1.5rem 0;
+  background-color: var(--site-bg-alt);
+  border-top: 1px solid var(--site-line);
+  font-size: var(--site-fs-small);
+  color: var(--site-text-muted);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.links a:hover {
+  color: var(--site-text);
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

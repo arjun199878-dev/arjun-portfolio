@@ -1,0 +1,33 @@
+.svg {
+  width: 100%;
+  height: auto;
+}
+
+.grid {
+  stroke: var(--site-line);
+  stroke-width: 1;
+}
+
+.line {
+  fill: none;
+  stroke: var(--site-link);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dot {
+  fill: var(--site-link);
+}
+
+.valueLabel,
+.axis {
+  font-family: var(--site-font);
+  font-size: 13px;
+  fill: var(--site-text-muted);
+}
+
+.valueLabel {
+  font-weight: 600;
+  fill: var(--site-text);
+}

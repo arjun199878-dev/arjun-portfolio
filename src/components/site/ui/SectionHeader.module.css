@@ -1,0 +1,42 @@
+.header {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.center {
+  text-align: center;
+}
+
+.center .title,
+.center .intro {
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: var(--site-fs-eyebrow);
+  font-weight: 600;
+  color: var(--site-text-muted);
+}
+
+.title {
+  max-width: 16ch;
+  font-size: var(--site-fs-h2);
+  font-weight: 700;
+  line-height: var(--site-lh-heading);
+  letter-spacing: var(--site-tracking-heading);
+}
+
+.intro {
+  max-width: 38ch;
+  margin-top: 1.25rem;
+  color: var(--site-text-muted);
+}
+
+.dark .eyebrow,
+.dark .intro {
+  color: var(--site-text-on-dark-muted);
+}
+
+.dark .title {
+  color: var(--site-text-on-dark);
+}

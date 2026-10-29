@@ -1,0 +1,13 @@
+.number {
+  font-size: var(--site-fs-h1);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: var(--site-tracking-number);
+  color: var(--site-text);
+}
+
+.label {
+  margin-top: 0.75rem;
+  color: var(--site-text-muted);
+  text-align: center;
+}

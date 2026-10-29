@@ -1,0 +1,33 @@
+.wrap {
+  width: 100%;
+}
+
+.frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--site-bg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding-inline: 12px;
+  background-color: var(--site-line);
+}
+
+.bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--site-text-muted);
+  opacity: 0.5;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}

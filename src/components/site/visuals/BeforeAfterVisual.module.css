@@ -1,0 +1,66 @@
+.group {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1.5rem, 6vw, 4rem);
+  width: 100%;
+}
+
+.col {
+  position: relative;
+  padding-top: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(80px, 22%, 140px);
+}
+
+.barArea {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 240px;
+}
+
+.before,
+.after {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.before {
+  background-color: var(--site-line);
+}
+
+.after {
+  height: 100%;
+  background-color: var(--site-link);
+  transform-origin: bottom;
+}
+
+.afterValue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: var(--site-fs-h3);
+  font-weight: 700;
+}
+
+.label {
+  margin-top: 0.75rem;
+  font-size: var(--site-fs-small);
+  color: var(--site-text-muted);
+  text-align: center;
+}
+
+.value {
+  font-size: var(--site-fs-small);
+  font-weight: 600;
+}
+
+.unit {
+  margin-top: 1rem;
+  font-size: var(--site-fs-small);
+  color: var(--site-text-muted);
+}

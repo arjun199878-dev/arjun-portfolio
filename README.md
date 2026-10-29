@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arjun T.R — portfolio site
 
-## Getting Started
+A one-page portfolio for a digital marketing and growth specialist, built with Next.js and edited through Sanity.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # then fill in the values
+npm run dev                  # http://localhost:7898
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where content lives
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Sanity Studio at `/studio` is the place to edit text, numbers, sections and their order.
+- `src/lib/content.ts` is the fallback. The site uses it when Sanity isn't configured, is unreachable, or a field is empty.
+- Colours, fonts, spacing and motion timing stay in code (`src/styles/theme.css`, `src/components/site/motion/tokens.ts`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Seed Sanity
 
-## Learn More
+```bash
+npx sanity login
+npm run seed:sanity
+```
 
-To learn more about Next.js, take a look at the following resources:
+This copies the content from `src/lib/content.ts` into the dataset. Re-running it replaces the same documents.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Live updates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Publishing in Sanity calls the webhook at `/api/revalidate`. Set `SANITY_REVALIDATE_SECRET` on the host and use the same secret in the Sanity webhook. The webhook should fire on create, update and delete.
 
-## Deploy on Vercel
+## Folder map
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/app/(site)` — the page and its layout (nav, footer, metadata)
+- `src/app/studio` — the embedded Sanity Studio
+- `src/app/api/revalidate` — the Sanity webhook route
+- `src/components/site` — sections, visuals, motion helpers and UI
+- `src/sanity` — client, schema, queries and the content loader
+- `src/lib` — `content.ts` (types and fallback), `format.ts` (number formatting)
+- `src/styles/theme.css` — design tokens (`--site-*`)
+- `docs/handoff` — the build notes for each step
+- `docs/archive` — experiments kept out of the build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server on port 7898 |
+| `npm run build` | Production build |
+| `npm run lint` | ESLint |
+| `npm run typecheck` | Generate route types and run `tsc` |
+| `npm run seed:sanity` | Write the fallback content into Sanity |

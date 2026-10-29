@@ -1,0 +1,132 @@
+.section {
+  background-color: var(--site-bg-dark);
+  color: var(--site-text-on-dark);
+}
+
+.pinned {
+  display: block;
+}
+
+.stacked {
+  display: none;
+  padding-block: var(--site-section-space);
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .pinned {
+    display: none;
+  }
+
+  .stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.track {
+  position: relative;
+  height: calc(100svh * var(--track, 5));
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.stat {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--site-gutter);
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.label {
+  font-size: var(--site-fs-eyebrow);
+  font-weight: 600;
+  color: var(--site-text-on-dark-muted);
+}
+
+.numberRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  margin: 1rem 0;
+  line-height: 1;
+}
+
+.from {
+  font-size: calc(var(--site-fs-number) * 0.45);
+  font-weight: 700;
+  letter-spacing: var(--site-tracking-number);
+  color: var(--site-text-on-dark-muted);
+  white-space: pre;
+}
+
+.number,
+.stackedNumber {
+  display: inline-block;
+  padding-bottom: 0.08em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: var(--site-tracking-number);
+  background: var(--site-number-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.number {
+  font-size: var(--site-fs-number);
+}
+
+.context {
+  max-width: 32ch;
+  color: var(--site-text-on-dark-muted);
+}
+
+.dots {
+  position: absolute;
+  right: var(--site-gutter);
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(-50%);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--site-line-dark);
+}
+
+.dot[data-active="true"] {
+  background-color: var(--site-text-on-dark);
+}
+
+/* Stacked layout */
+.block .numberRow {
+  justify-content: flex-start;
+}
+
+.block .from {
+  font-size: calc(clamp(4rem, 18vw, 6rem) * 0.45);
+}
+
+.stackedNumber {
+  font-size: clamp(4rem, 18vw, 6rem);
+}
+
+.block {
+  text-align: left;
+}

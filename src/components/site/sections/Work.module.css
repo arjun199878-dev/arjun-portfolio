@@ -1,0 +1,10 @@
+.section {
+  padding-block: var(--site-section-space);
+  background-color: var(--site-bg);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5rem, 10vw, 9rem);
+}

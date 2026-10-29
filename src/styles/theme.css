@@ -9,6 +9,12 @@
   --site-text-on-dark-muted: #86868b;
   --site-link: #0071e3;
   --site-link-hover: #0077ed;
+  --site-button: #0071e3;
+  --site-button-hover: #0077ed;
+  --site-surface: #ffffff;
+  --site-input-bg: #ffffff;
+  --site-nav-bg: rgba(255, 255, 255, 0.72);
+  --site-nav-border: rgba(0, 0, 0, 0.08);
   --site-line: #d2d2d7;
   --site-line-dark: #424245;
   --site-number-gradient: linear-gradient(90deg, #2997ff 0%, #a970ff 100%);
@@ -46,6 +52,47 @@
   --site-dur-fast: 240ms;
   --site-dur-reveal: 800ms;
   --site-reveal-distance: 30px;
+}
+
+/* Dark theme: follows the system unless the visitor picks one with the toggle. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --site-bg: #000000;
+    --site-bg-alt: #161617;
+    --site-text: #f5f5f7;
+    --site-text-muted: #a1a1a6;
+    --site-link: #2997ff;
+    --site-link-hover: #409cff;
+    --site-button: #0071e3;
+    --site-button-hover: #0077ed;
+    --site-line: #424245;
+    --site-surface: #2c2c2e;
+    --site-input-bg: #1d1d1f;
+    --site-nav-bg: rgba(0, 0, 0, 0.72);
+    --site-nav-border: rgba(255, 255, 255, 0.12);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --site-bg: #000000;
+  --site-bg-alt: #161617;
+  --site-text: #f5f5f7;
+  --site-text-muted: #a1a1a6;
+  --site-link: #2997ff;
+  --site-link-hover: #409cff;
+  --site-button: #0071e3;
+  --site-button-hover: #0077ed;
+  --site-line: #424245;
+  --site-surface: #2c2c2e;
+  --site-input-bg: #1d1d1f;
+  --site-nav-bg: rgba(0, 0, 0, 0.72);
+  --site-nav-border: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+
 }
 
 .site-numeric {

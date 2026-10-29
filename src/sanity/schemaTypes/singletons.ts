@@ -16,6 +16,7 @@ const LABEL_FIELDS: [string, string][] = [
   ["educationHeading", "Education heading"],
   ["menuOpen", "Menu button (open)"],
   ["menuClose", "Menu button (close)"],
+  ["themeToggle", "Light/dark switch (screen readers)"],
 ];
 
 export const siteSettings = defineType({

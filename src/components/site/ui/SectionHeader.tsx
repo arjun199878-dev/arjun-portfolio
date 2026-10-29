@@ -1,4 +1,5 @@
 import { Reveal } from "../motion/Reveal";
+import { ScrollFade } from "../motion/ScrollFade";
 import styles from "./SectionHeader.module.css";
 
 type SectionHeaderProps = {
@@ -12,12 +13,14 @@ type SectionHeaderProps = {
 
 export function SectionHeader({ eyebrow, title, intro, align = "left", tone = "light", id }: SectionHeaderProps) {
   return (
-    <Reveal className={`${styles.header} ${align === "center" ? styles.center : ""} ${tone === "dark" ? styles.dark : ""}`}>
+    <ScrollFade className={styles.header}>
+    <Reveal className={`${styles.inner} ${align === "center" ? styles.center : ""} ${tone === "dark" ? styles.dark : ""}`}>
       {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
       <h2 id={id} className={styles.title}>
         {title}
       </h2>
       {intro ? <p className={styles.intro}>{intro}</p> : null}
     </Reveal>
+    </ScrollFade>
   );
 }

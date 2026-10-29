@@ -5,10 +5,10 @@
   right: 0;
   z-index: 100;
   height: var(--site-nav-h);
-  background-color: rgba(255, 255, 255, 0.72);
+  background-color: var(--site-nav-bg);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--site-nav-border);
   color: var(--site-text);
   transition:
     background-color var(--site-dur-fast) var(--site-ease),
@@ -43,8 +43,16 @@
 }
 
 .brand {
+  margin-right: auto;
   font-size: 17px;
   font-weight: 600;
+}
+
+.tools {
+  margin-right: -10px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .links {
@@ -72,7 +80,7 @@
   height: 28px;
   padding: 0 0.9rem;
   border-radius: var(--site-radius-pill);
-  background-color: var(--site-link);
+  background-color: var(--site-button);
   color: #fff;
   font-size: 13px;
   font-weight: 500;
@@ -80,7 +88,7 @@
 }
 
 .cta:hover {
-  background-color: var(--site-link-hover);
+  background-color: var(--site-button-hover);
 }
 
 .menuButton {
@@ -91,7 +99,6 @@
   gap: 6px;
   width: 44px;
   height: 44px;
-  margin-right: -10px;
 }
 
 .bar {
@@ -118,7 +125,7 @@
   display: flex;
   flex-direction: column;
   padding: 0.5rem var(--site-gutter) 1.5rem;
-  background-color: #fff;
+  background-color: var(--site-bg);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);

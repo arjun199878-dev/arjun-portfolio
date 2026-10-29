@@ -1,0 +1,43 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: inherit;
+  opacity: 0.8;
+  transition: opacity var(--site-dur-fast) var(--site-ease);
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+/* The icon shows the theme you'd switch to, decided in CSS so there's no hydration flash. */
+.sun,
+.moon {
+  position: absolute;
+}
+
+.sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .moon {
+    display: none;
+  }
+}

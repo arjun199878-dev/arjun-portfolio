@@ -58,7 +58,7 @@
   padding: 0 1rem;
   border: 1px solid var(--site-line);
   border-radius: 12px;
-  background-color: #fff;
+  background-color: var(--site-input-bg);
   transition:
     border-color var(--site-dur-fast) var(--site-ease),
     box-shadow var(--site-dur-fast) var(--site-ease);
@@ -79,7 +79,7 @@
 .submit {
   padding: 0.75rem 1.4rem;
   border-radius: var(--site-radius-pill);
-  background-color: var(--site-link);
+  background-color: var(--site-button);
   color: #fff;
   font-size: var(--site-fs-small);
   font-weight: 500;
@@ -87,7 +87,7 @@
 }
 
 .submit:hover {
-  background-color: var(--site-link-hover);
+  background-color: var(--site-button-hover);
 }
 
 .note {

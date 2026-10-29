@@ -35,7 +35,7 @@
   align-self: start;
   padding: 2rem;
   border-radius: var(--site-radius-tile);
-  background-color: var(--site-bg);
+  background-color: var(--site-surface);
 }
 
 .eduHeading {

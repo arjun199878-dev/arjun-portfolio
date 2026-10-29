@@ -12,7 +12,7 @@
 .tile {
   padding: clamp(1.5rem, 3vw, 2.25rem);
   border-radius: var(--site-radius-tile);
-  background-color: var(--site-bg);
+  background-color: var(--site-surface);
 }
 
 .title {

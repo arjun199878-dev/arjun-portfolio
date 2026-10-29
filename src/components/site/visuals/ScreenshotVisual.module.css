@@ -6,7 +6,7 @@
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
-  background-color: var(--site-bg);
+  background-color: var(--site-surface);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 

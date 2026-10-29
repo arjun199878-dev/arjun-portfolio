@@ -16,14 +16,14 @@
 .pill {
   padding: 1rem 1.25rem;
   border-radius: 14px;
-  background-color: var(--site-bg);
+  background-color: var(--site-surface);
   font-size: var(--site-fs-small);
   font-weight: 600;
   text-align: center;
 }
 
 .last {
-  background-color: var(--site-link);
+  background-color: var(--site-button);
   color: #fff;
 }
 

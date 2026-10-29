@@ -1,5 +1,6 @@
 import type { Education } from "@/lib/content";
 import { Reveal } from "../motion/Reveal";
+import { ScrollFade } from "../motion/ScrollFade";
 import styles from "./About.module.css";
 
 type AboutProps = {
@@ -14,6 +15,7 @@ export function About({ eyebrow, headline, paragraphs, educationHeading, educati
   return (
     <section id="about" className={styles.section} aria-labelledby="about-title">
       <div className={`site-container-wide ${styles.grid}`}>
+        <ScrollFade>
         <Reveal>
           <p className={styles.eyebrow}>{eyebrow}</p>
           <h2 id="about-title" className={styles.title}>
@@ -25,6 +27,7 @@ export function About({ eyebrow, headline, paragraphs, educationHeading, educati
             </p>
           ))}
         </Reveal>
+        </ScrollFade>
         <Reveal delay={0.15} className={styles.tile}>
           <h3 className={styles.eduHeading}>{educationHeading}</h3>
           <ul>

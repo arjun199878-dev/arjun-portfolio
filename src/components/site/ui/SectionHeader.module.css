@@ -2,6 +2,10 @@
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
+.inner {
+  display: block;
+}
+
 .center {
   text-align: center;
 }

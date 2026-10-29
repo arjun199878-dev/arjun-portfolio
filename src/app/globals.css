@@ -12,7 +12,6 @@
 }
 
 html {
-  color-scheme: light;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-padding-top: calc(var(--site-nav-h) + 1rem);
@@ -117,13 +116,13 @@ h4 {
   left: 0.75rem;
   z-index: 1000;
   padding: 0.5rem 1rem;
-  background: var(--site-link);
+  background: var(--site-button);
   color: #fff;
   font-family: var(--site-font);
   border-radius: var(--site-radius-pill);
   font-size: var(--site-fs-small);
   font-weight: 500;
-  border: 2px solid var(--site-link);
+  border: 2px solid var(--site-button);
   transform: translateY(calc(-100% - 1rem));
   transition: transform var(--site-dur-fast) var(--site-ease);
 }

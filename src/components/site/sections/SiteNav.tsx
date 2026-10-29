@@ -2,13 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { NavItem, SectionKey } from "@/lib/content";
+import { ThemeToggle } from "../ui/ThemeToggle";
 import styles from "./SiteNav.module.css";
 
 type SiteNavProps = {
   name: string;
   navItems: readonly (NavItem & { section: SectionKey })[];
   visibleSections: readonly SectionKey[];
-  labels: { menuOpen: string; menuClose: string };
+  labels: { menuOpen: string; menuClose: string; themeToggle: string };
 };
 
 export function SiteNav({ name, navItems, visibleSections, labels }: SiteNavProps) {
@@ -83,6 +84,8 @@ export function SiteNav({ name, navItems, visibleSections, labels }: SiteNavProp
             </a>
           ))}
         </nav>
+        <div className={styles.tools}>
+        <ThemeToggle label={labels.themeToggle} />
         <button
           type="button"
           className={styles.menuButton}
@@ -94,6 +97,7 @@ export function SiteNav({ name, navItems, visibleSections, labels }: SiteNavProp
           <span className={`${styles.bar} ${open ? styles.barTop : ""}`} />
           <span className={`${styles.bar} ${open ? styles.barBottom : ""}`} />
         </button>
+        </div>
       </div>
       <div id="site-mobile-menu" className={`${styles.panel} ${open ? styles.panelOpen : ""}`}>
         {items.map((item) => (

@@ -33,6 +33,12 @@ export const SCALE = {
 export const VIEWPORT = { once: true, amount: 0.25 } as const;
 export const COUNT_VIEWPORT = { once: true, amount: 0.6 } as const;
 
+export const FADE_OUT = {
+  start: "start 22%", // fade begins when the element's top is 22% down the screen
+  end: "end 0%", // fully gone when its bottom reaches the top of the screen
+  lift: 24, // px it drifts up while fading
+} as const;
+
 export const NUMBERS = {
   trackScreens: 5, // height of the numbers chapter in screens (4 stats + run-out)
   phases: { enterEnd: 0.15, countEnd: 0.7, holdEnd: 0.85 }, // within each stat's quarter

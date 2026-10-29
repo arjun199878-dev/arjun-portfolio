@@ -387,6 +387,7 @@ export const labels = {
   skipLink: "Skip to main content",
   menuOpen: "Open menu",
   menuClose: "Close menu",
+  themeToggle: "Switch between light and dark mode",
   heroPrimaryCta: "See the results",
   heroSecondaryCta: "Get in touch",
   resultsHeading: "Results",
